@@ -135,12 +135,14 @@ public class ProgramsFormController {
     ObservableList<TechAddTm> tmList = FXCollections.observableArrayList();
 
     public void saveOnAction(ActionEvent event) {
+        //<=Capture the technology list over the technology table
         String[] selectedTechs = new String[tmList.size()];
         int pointer = 0;
         for (TechAddTm t : tmList) {
             selectedTechs[pointer] = t.getName();
             pointer++;
         }
+        //<=
         Program program = new Program(
                 txtId.getText(),
                 txtName.getText(),
@@ -163,7 +165,6 @@ public class ProgramsFormController {
             }
 
         } else {
-
             try {
                 if (updateProgram(program)) {
                     clear();
@@ -177,7 +178,6 @@ public class ProgramsFormController {
             }
         }
     }
-
 
     private void loadPrograms() {
         ObservableList<ProgramTm> programsTmList = FXCollections.observableArrayList();

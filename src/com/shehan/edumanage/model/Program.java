@@ -20,6 +20,10 @@ public class Program {
         this.cost = cost;
     }
 
+    public Program(String name) {
+        this.name = name;
+    }
+
     public String getCode() {
         return code;
     }

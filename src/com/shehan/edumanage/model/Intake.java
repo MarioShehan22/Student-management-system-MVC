@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class Intake {
     private String intakeId;
-    private Date startDate;
     private String intakeName;
+    private Date startDate;
     private String programId;
     private boolean intakeCompleteness;
 
@@ -14,10 +14,14 @@ public class Intake {
 
     public Intake(String intakeId, Date startDate, String intakeName, String programId, boolean intakeCompleteness) {
         this.intakeId = intakeId;
-        this.startDate = startDate;
         this.intakeName = intakeName;
+        this.startDate = startDate;
         this.programId = programId;
         this.intakeCompleteness = intakeCompleteness;
+    }
+
+    public Intake(String intakeName) {
+        this.intakeName = intakeName;
     }
 
     public boolean isIntakeCompleteness() {
